@@ -17,10 +17,10 @@ Future<bool> commitMsg() async {
 
 Future<bool> preCommit() async {
   try {
-    // var result = await Process.run('dart', ['analyze']);
-    // print(result.stdout);
-    // print(result.stderr);
-    // if (result.exitCode != 0) return false;
+    var result = await Process.run('dart', ['analyze']);
+    print(result.stdout);
+    print(result.stderr);
+    if (result.exitCode != 0) return false;
     return true;
   } catch (e) {
     return false;
